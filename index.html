@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#263D32">
+<title>Ujjain Wellness  | Wellness, Relaxation & Self-Care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#252B27;--muted:#66665F;--purple:#AD7028;--purple2:#D7AF45;--lav:#E9E5E3;--paper:#F7F4F0;--line:#E7DED2;--white:#fff;--radius:24px;--shadow:0 18px 60px #25205d12}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#c8c4f4 .7px,transparent .7px);background-size:18px 18px;z-index:-1}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}.container{width:min(1160px,calc(100% - 44px));margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.75rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--purple)}.eyebrow:before{content:"";width:23px;height:2px;background:var(--purple);border-radius:3px}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:Manrope,sans-serif;letter-spacing:-.045em}h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.08;margin:14px 0 18px}p{color:var(--muted);line-height:1.75}.section{padding:100px 0;position:relative}.section-head{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:38px}.section-head>div{max-width:600px}.section-head p{max-width:410px;margin-bottom:5px}.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:13px;background:var(--purple);color:#fff;font-weight:700;font-size:.9rem;box-shadow:0 9px 22px #AD702836;transition:transform .3s,box-shadow .3s,background .3s;cursor:pointer}.btn:hover{transform:translateY(-4px);box-shadow:0 15px 28px #AD70284d;background:#89531D}.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}.btn.ghost:hover{color:var(--purple);box-shadow:inset 0 0 0 1px var(--purple)}.arrow{font-size:1.1rem;transition:transform .25s}.btn:hover .arrow{transform:translateX(4px)}
+/* navigation */.nav-wrap{position:sticky;top:0;z-index:100;padding:14px 0;transition:all .3s}.nav-wrap.scrolled{padding:8px 0;background:#F7F4F0f0;backdrop-filter:blur(18px);box-shadow:0 8px 30px #252B270a}.nav{display:flex;align-items:center;justify-content:space-between;background:#ffffffd9;border:1px solid #fff;border-radius:18px;padding:11px 15px 11px 20px;box-shadow:0 8px 32px #252B2708}.logo{display:flex;align-items:center;gap:10px;font-family:Manrope;font-weight:800;font-size:1.18rem;letter-spacing:-.05em}.logo-mark{width:64px;height:64px;display:block;object-fit:contain;border-radius:8px;flex:none}.logo img{width:64px;height:64px;object-fit:contain}.logo-name{display:flex;flex-direction:column;line-height:1.1;letter-spacing:-.02em}.logo-name small{font-size:.62rem;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-top:4px}.nav-links{display:flex;align-items:center;gap:27px;font-size:.82rem;font-weight:600;color:#5e6078}.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--purple)}.nav .btn{padding:12px 17px;border-radius:11px;font-size:.8rem}.menu-btn{display:none;border:0;background:var(--lav);border-radius:10px;padding:10px;color:var(--ink)}
+/* hero */.hero{padding:48px 0 70px;min-height:650px;display:flex;align-items:center;position:relative}.hero-grid{display:grid;grid-template-columns:1fr 1.03fr;align-items:center;gap:55px}.hero-copy{position:relative;z-index:2}.hero h1{font-size:clamp(3rem,6.2vw,5.3rem);line-height:.99;max-width:620px;margin:20px 0 24px}.hero h1 span{color:var(--purple);position:relative;white-space:nowrap}.hero h1 span:after{content:"";position:absolute;height:10px;left:0;right:0;bottom:-6px;background:#E8D3A1;border-radius:50%;z-index:-1;transform:rotate(-2deg)}.hero-copy>p{font-size:1.03rem;max-width:480px;margin-bottom:30px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-note{display:flex;align-items:center;gap:12px;margin-top:35px;font-size:.82rem;color:var(--muted)}.avatars{display:flex;padding-left:5px}.avatars img{width:34px;height:34px;object-fit:cover;border-radius:50%;border:3px solid var(--paper);margin-left:-7px}.hero-note strong{color:var(--ink)}.hero-visual{position:relative;min-height:490px}.hero-photo{position:absolute;inset:0 16px 12px 24px;border-radius:42% 42% 28px 28px;overflow:hidden;background:var(--lav);box-shadow:var(--shadow)}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center;animation:slowZoom 18s ease-in-out infinite alternate}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#252B2733,transparent 42%)}.blob{position:absolute;width:180px;height:180px;border:1px solid #E7D3A1;border-radius:50%;z-index:-1}.blob.one{right:-35px;top:8px}.blob.two{width:90px;height:90px;left:-22px;bottom:28px}.float-card{position:absolute;z-index:3;background:#ffffffed;backdrop-filter:blur(15px);border:1px solid #fff;border-radius:18px;padding:16px 18px;box-shadow:0 20px 50px #1c17431c;animation:float 5s ease-in-out infinite}.float-card small{display:block;color:var(--muted);font-size:.72rem;margin-bottom:7px}.float-card strong{font-family:Manrope;font-size:1.1rem}.float-card .mini-icon{display:inline-grid;place-items:center;width:31px;height:31px;background:var(--lav);color:var(--purple);border-radius:10px;margin-right:7px}.float-card.rating{left:-12px;bottom:60px}.float-card.rating strong{font-size:.92rem}.float-card.experience{right:-5px;top:45px;animation-delay:-2s}.rating-stars{color:#ffb64c;letter-spacing:2px;font-size:.8rem}.hero-stamp{position:absolute;right:0;bottom:2px;width:92px;height:92px;border-radius:50%;background:var(--purple);color:#fff;display:grid;place-items:center;text-align:center;font-size:.65rem;font-weight:700;line-height:1.3;transform:rotate(12deg);box-shadow:0 12px 30px #AD70284d}.hero-stamp span{font-size:1.3rem;display:block}
+/* trust */.trust{padding:24px 0 48px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.trust-label{font-size:.78rem;font-weight:700;color:var(--muted);white-space:nowrap}.trust-logos{display:flex;align-items:center;justify-content:space-around;gap:35px;flex:1;color:#8b8da2;font-family:Manrope;font-size:.96rem;font-weight:800;letter-spacing:-.04em}.trust-logos span{display:flex;align-items:center;gap:8px}.trust-logos i{font-style:normal;color:var(--purple);font-size:1.3rem}
+/* booking */.booking{padding:42px 0 30px}.booking-panel{background:linear-gradient(120deg,#F3E9D9,#F7F1E7);border:1px solid #E9D9BD;border-radius:28px;padding:38px 42px;position:relative;overflow:hidden}.booking-panel:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #d8d3ff;border-radius:50%;right:-90px;top:-130px}.booking-head{text-align:center;position:relative;z-index:1}.booking-head h2{font-size:2rem;margin:0 0 9px}.booking-head p{font-size:.83rem;max-width:500px;margin:0 auto 26px}.booking-form{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative;z-index:1}.field{position:relative}.field input,.field select{width:100%;height:51px;border:1px solid #E7DED2;border-radius:11px;background:#fff;padding:0 13px;color:var(--ink);outline:none;transition:border .2s,box-shadow .2s}.field input:focus,.field select:focus{border-color:var(--purple);box-shadow:0 0 0 3px #AD70281a}.booking-form .btn{height:51px;padding:10px}.form-message{display:none;margin:14px 0 0;text-align:center;color:#3c8b67;font-size:.85rem;font-weight:700}
+/* about */.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.about-visual{min-height:490px;position:relative}.about-main{position:absolute;inset:0 45px 35px 0;border-radius:26px;overflow:hidden}.about-main img{width:100%;height:100%;object-fit:cover}.about-side{position:absolute;right:0;bottom:0;width:42%;height:42%;border:8px solid var(--paper);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.about-side img{width:100%;height:100%;object-fit:cover}.stat-card{position:absolute;left:-22px;top:35px;padding:18px 22px;border-radius:16px;background:#fff;box-shadow:var(--shadow);border:1px solid #E7DED2}.stat-card strong{font-family:Manrope;font-size:1.8rem;color:var(--purple);display:block}.stat-card span{font-size:.75rem;color:var(--muted)}.about-copy>p{max-width:510px}.check-list{display:grid;grid-template-columns:1fr 1fr;gap:15px 18px;margin:28px 0 32px}.check{display:flex;gap:10px;align-items:flex-start;font-size:.87rem;font-weight:600}.check b{width:22px;height:22px;flex:none;display:grid;place-items:center;border-radius:7px;background:#F3E9D9;color:var(--purple);font-size:.72rem}
+/* services */.services{background:linear-gradient(140deg,#263D32,#385443);color:#fff;overflow:hidden}.services:before,.services:after{content:"";position:absolute;border:1px solid #ffffff2b;border-radius:50%;width:350px;height:350px}.services:before{left:-220px;top:-140px}.services:after{right:-220px;bottom:-190px}.services .eyebrow{color:#E8D3A1}.services .eyebrow:before{background:#E8D3A1}.services .section-head p{color:#EDE4D8}.services h2{color:#fff}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;position:relative;z-index:1}.service-card{background:#fff;color:var(--ink);border-radius:19px;padding:29px 25px 26px;min-height:245px;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}.service-card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:#F3E9D9;right:-55px;top:-55px;transition:transform .4s}.service-card:hover{transform:translateY(-8px);box-shadow:0 22px 45px #1C33264D}.service-card:hover:after{transform:scale(1.5)}.service-icon{width:56px;height:56px;border-radius:16px;background:var(--lav);display:grid;place-items:center;color:var(--purple);font-size:1.7rem;margin-bottom:20px;position:relative;z-index:1}.service-card h3{font-size:1.1rem;margin-bottom:10px}.service-card p{font-size:.82rem;line-height:1.7;margin-bottom:18px}.text-link{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:800;color:var(--purple)}.text-link span{transition:transform .2s}.text-link:hover span{transform:translateX(5px)}
+/* quality */.quality-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:75px}.quality-image{height:420px;position:relative;border-radius:28px;overflow:hidden}.quality-image img{width:100%;height:100%;object-fit:cover}.quality-image:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#252B2780)}.image-caption{position:absolute;z-index:1;bottom:23px;left:25px;color:#fff;font-family:Manrope;font-weight:800;font-size:1.15rem}.quality-copy p{max-width:520px}.quality-points{display:grid;gap:14px;margin:25px 0 30px}.quality-point{display:flex;gap:13px;align-items:center;font-size:.9rem;font-weight:600}.quality-point span{width:26px;height:26px;border-radius:8px;background:#E9D9BD;color:var(--purple);display:grid;place-items:center;flex:none}
+/* team */.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.team-card{background:#fff;border:1px solid var(--line);border-radius:21px;padding:12px;transition:transform .3s,box-shadow .3s}.team-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.team-photo{height:290px;border-radius:14px;overflow:hidden;background:var(--lav);position:relative}.team-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.team-card:hover .team-photo img{transform:scale(1.06)}.team-info{padding:18px 10px 12px}.team-info h3{font-size:1.05rem;margin-bottom:5px}.team-info p{font-size:.8rem;margin-bottom:13px}.socials{display:flex;gap:7px}.socials a{display:grid;place-items:center;width:30px;height:30px;background:var(--lav);border-radius:9px;color:var(--purple);font-size:.78rem;font-weight:800;transition:background .2s,color .2s}.socials a:hover{background:var(--purple);color:#fff}
+/* testimonials */.testimonials{background:#EEE8E0;overflow:hidden}.testimonial-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:center}.review-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:10px;transform:rotate(-2deg)}.review-mosaic img{width:100%;height:145px;object-fit:cover;border-radius:16px}.review-mosaic img:nth-child(2),.review-mosaic img:nth-child(3){transform:translateY(16px)}.review-card{background:var(--purple);color:#fff;padding:38px;border-radius:25px;box-shadow:0 25px 55px #AD702833;position:relative;overflow:hidden}.review-card:after{content:"“";font-family:Georgia;font-size:12rem;line-height:1;position:absolute;right:18px;top:-23px;color:#ffffff18}.review-card .stars{color:#ffce70;letter-spacing:4px;margin:15px 0}.review-card blockquote{font-family:Manrope;font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.55;font-weight:600;margin:0 0 26px;position:relative;z-index:1}.review-person{display:flex;align-items:center;gap:12px}.review-person img{width:45px;height:45px;border-radius:50%;object-fit:cover;border:2px solid #ffffff80}.review-person strong{display:block;font-size:.9rem}.review-person small{color:#E8D3A1;font-size:.78rem}
+/* articles */.article-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.article-card{display:grid;grid-template-columns:42% 1fr;gap:20px;background:#fff;border:1px solid var(--line);padding:12px;border-radius:19px;transition:transform .3s,box-shadow .3s}.article-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.article-card img{width:100%;height:190px;object-fit:cover;border-radius:12px}.article-body{padding:10px 8px 8px 0;display:flex;flex-direction:column;align-items:flex-start}.article-meta{font-size:.72rem;color:var(--purple);font-weight:800;margin-bottom:10px}.article-body h3{font-size:1.12rem;line-height:1.3;margin-bottom:9px}.article-body p{font-size:.8rem;line-height:1.6;margin-bottom:15px}.article-body .text-link{margin-top:auto;font-size:.78rem}
+/* CTA & footer */.cta{padding:30px 0 100px}.cta-panel{border-radius:28px;background:var(--ink);color:#fff;padding:48px 55px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}.cta-panel:after{content:"";position:absolute;width:320px;height:320px;border:1px solid #ffffff1c;border-radius:50%;right:18%;top:-230px;box-shadow:0 0 0 35px #FFFFFF08,0 0 0 70px #ffffff05}.cta-panel h2{font-size:clamp(1.8rem,3vw,2.7rem);max-width:590px;margin:12px 0 0;color:#fff}.cta-panel p{color:#b9bbd2;margin:12px 0 0;max-width:520px}.cta-panel .btn{flex:none;position:relative;z-index:1}.footer{background:#fff;border-top:1px solid var(--line);padding:65px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}.footer-brand p{max-width:290px;font-size:.84rem;margin-top:17px}.footer h3{font-size:.9rem;letter-spacing:0;margin-bottom:18px}.footer-links{display:grid;gap:12px}.footer-links a,.footer-contact p{font-size:.82rem;color:var(--muted);margin:0;transition:color .2s}.footer-links a:hover{color:var(--purple)}.footer-contact{display:grid;gap:12px}.footer-bottom{border-top:1px solid var(--line);margin-top:45px;padding-top:22px;display:flex;justify-content:space-between;gap:20px;font-size:.75rem;color:var(--muted)}.back-top{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border:0;border-radius:14px;background:var(--purple);color:#fff;font-size:1.2rem;box-shadow:0 10px 25px #AD70284a;cursor:pointer;z-index:90;opacity:0;pointer-events:none;transform:translateY(10px);transition:all .3s}.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+/* motion */.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .8s,transform .8s}.reveal-left.visible{opacity:1;transform:translateX(0)}.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .8s,transform .8s}.reveal-right.visible{opacity:1;transform:translateX(0)}.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}.delay-4{transition-delay:.4s}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.08)}}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #AD70282b}50%{box-shadow:0 0 0 12px #AD702800}}.hero-stamp{animation:pulse 3s infinite}
+@media(max-width:900px){.nav-links{gap:15px}.hero-grid{gap:25px}.hero h1{font-size:clamp(2.8rem,6vw,4.4rem)}.hero-visual{min-height:420px}.booking-form{grid-template-columns:repeat(2,1fr)}.about-grid,.quality-grid{gap:40px}.team-photo{height:240px}.testimonial-layout{gap:35px}.article-card{grid-template-columns:1fr}.article-card img{height:170px}.article-body{padding:5px 8px 8px}.footer-grid{grid-template-columns:1.4fr 1fr 1fr}.footer-grid>div:last-child{grid-column:2/4}}
+@media(max-width:680px){.container{width:min(100% - 30px,520px)}.section{padding:72px 0}.nav-wrap{padding:8px 0}.nav{padding:9px 11px 9px 14px}.menu-btn{display:block}.nav>.btn{display:none}.nav-links{display:none;position:absolute;top:calc(100% + 2px);left:15px;right:15px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:13px 8px;border-bottom:1px solid #f1f0f8}.nav-links a:last-child{border:0}.hero{padding:30px 0 45px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:38px}.hero h1{font-size:clamp(3.05rem,13vw,4.5rem)}.hero-copy>p{font-size:.95rem}.hero-visual{min-height:380px;margin:0 5px}.hero-photo{inset:0 14px 10px 14px;border-radius:43% 43% 24px 24px}.float-card.rating{left:-2px;bottom:38px}.float-card.experience{right:-2px;top:25px}.hero-stamp{right:0;bottom:0;width:76px;height:76px}.trust-inner{align-items:flex-start;flex-direction:column}.trust-logos{width:100%;flex-wrap:wrap;gap:18px;justify-content:flex-start;font-size:.85rem}.section-head{display:block;margin-bottom:30px}.section-head p{margin-top:14px}.booking{padding:25px 0}.booking-panel{padding:28px 18px;border-radius:22px}.booking-form{grid-template-columns:1fr}.booking-head h2{font-size:1.7rem}.about-grid,.quality-grid{grid-template-columns:1fr;gap:35px}.about-visual{min-height:390px;margin:0 5px}.about-main{inset:0 35px 25px 0}.stat-card{left:-5px;top:20px}.about-copy{order:-1}.check-list{gap:13px}.services .section-head{display:block}.service-grid{grid-template-columns:1fr;gap:13px}.service-card{min-height:unset;padding:24px}.service-icon{margin-bottom:15px}.quality-image{height:330px}.team-grid{grid-template-columns:1fr;gap:16px}.team-card{display:grid;grid-template-columns:42% 1fr;align-items:center;gap:10px}.team-photo{height:210px}.team-info{padding:15px 7px}.testimonial-layout{grid-template-columns:1fr;gap:35px}.review-mosaic{max-width:430px}.review-mosaic img{height:125px}.review-card{padding:28px}.article-grid{grid-template-columns:1fr}.article-card{grid-template-columns:40% 1fr;gap:13px}.article-card img{height:180px}.article-body h3{font-size:1rem}.article-body p{font-size:.76rem}.cta{padding:0 0 70px}.cta-panel{padding:32px 25px;display:block}.cta-panel .btn{margin-top:25px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px 20px}.footer-brand{grid-column:1/3}.footer-grid>div:last-child{grid-column:auto}.footer-bottom{flex-direction:column;gap:8px;margin-top:32px}.back-top{right:14px;bottom:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.reveal-left,.reveal-right{opacity:1;transform:none}}
+
+/* Scroll-linked overlay animation */
+.scroll-overlay{
+  position:fixed;inset:0;z-index:120;pointer-events:none;
+  background:linear-gradient(115deg,rgba(98,81,245,.12),rgba(255,255,255,0) 48%,rgba(131,119,255,.10));
+  opacity:0;transform:translateY(14%);
+  will-change:transform,opacity;
+}
+.scroll-progress{
+  position:fixed;top:0;left:0;height:3px;width:100%;z-index:130;
+  transform:scaleX(0);transform-origin:left center;
+  background:linear-gradient(90deg,#AD7028,#D7AF45);
+  box-shadow:0 0 14px #AD702855;pointer-events:none;
+}
+.scroll-wipe{position:relative;isolation:isolate;overflow:hidden}
+.scroll-wipe:after{
+  content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(120deg,#AD7028,#D7AF45);
+  transform:scaleY(var(--wipe,0));transform-origin:bottom;
+  opacity:.18;border-radius:inherit;
+}
+
+
+/* Premium scroll experience: cinematic hero, kinetic type, clip reveals, horizontal card story */
+.hero{min-height:calc(100vh - 82px);padding-top:32px;padding-bottom:50px}
+.hero-copy .kinetic-line{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+.hero-copy .kinetic-line span{display:inline-block;will-change:transform,opacity}
+.hero-photo{clip-path:inset(0 round 42% 42% 28px 28px);will-change:clip-path,transform}
+.hero-photo video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-photo img{position:relative;z-index:1;mix-blend-mode:normal;transition:opacity .4s}
+.hero-photo.video-ready img{opacity:0}
+.hero-photo:after{z-index:2;pointer-events:none}
+.scroll-story{padding:90px 0 100px;background:#252B27;color:white;overflow:hidden;position:relative}
+.scroll-story:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,#AD702844,transparent 42%),linear-gradient(120deg,#252B27,#263D32);pointer-events:none}
+.story-top{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.story-top h2{font-size:clamp(2.4rem,5vw,4.6rem);max-width:650px;margin-bottom:0;color:#fff;line-height:.98}
+.story-top p{max-width:300px;color:#D9D8D0;margin-bottom:4px}
+.story-track-wrap{position:relative;z-index:1;overflow:visible}
+.story-track{display:flex;gap:20px;width:max-content;will-change:transform;padding:12px 22px 25px 0}
+.story-card{width:min(34vw,390px);min-width:280px;height:430px;position:relative;overflow:hidden;border-radius:22px;background:#333;transform-origin:center bottom;box-shadow:0 25px 70px #0003}
+.story-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.story-card:hover img{transform:scale(1.06)}
+.story-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#11132be8,transparent 62%)}
+.story-card .story-index{position:absolute;top:20px;left:20px;z-index:1;color:#fff;font-size:.75rem;letter-spacing:.15em;font-weight:800}
+.story-card .story-content{position:absolute;z-index:1;left:24px;right:24px;bottom:24px}
+.story-card h3{color:#fff;font-size:1.7rem;line-height:1.05;margin:0 0 9px}
+.story-card p{color:#e0dfef;font-size:.86rem;line-height:1.55;margin:0}
+.story-progress{height:2px;background:#ffffff2b;position:relative;z-index:1;margin-top:8px;overflow:hidden}
+.story-progress span{display:block;width:100%;height:100%;background:#D7AF45;transform:scaleX(0);transform-origin:left}
+.section-transition{position:relative;isolation:isolate}
+.section-transition:before{content:"";position:absolute;inset:0;background:linear-gradient(130deg,#AD7028,#D7AF45);clip-path:inset(0 0 100% 0);z-index:-1;pointer-events:none}
+@media(max-width:760px){.hero{min-height:auto}.story-top{display:block}.story-top p{margin-top:18px}.story-card{width:78vw;min-width:78vw;height:390px}.scroll-story{padding:70px 0}.story-track{padding-right:15px}.story-top h2{font-size:clamp(2.4rem,11vw,3.8rem)}}
+@media(prefers-reduced-motion:reduce){.story-track,.story-card,.hero-photo,.hero-copy .kinetic-line span{will-change:auto}}
+
+ 
+/* Wellness-first service imagery and membership cards */
+.service-grid.wellness-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.service-card{padding:14px 18px 24px;min-height:0}
+.service-image{height:190px;border-radius:13px;overflow:hidden;margin-bottom:18px;background:#e9e5e3;position:relative}
+.service-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+.service-card:hover .service-image img{transform:scale(1.07);filter:saturate(1.08)}
+.service-card .service-icon{width:43px;height:43px;margin-bottom:13px;font-size:1.3rem}
+.service-card p{min-height:0}
+.membership{background:#f0e9df}
+.membership-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.membership-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 10px 32px #252b2708;transition:transform .3s,box-shadow .3s}
+.membership-card:hover{transform:translateY(-7px);box-shadow:0 22px 45px #252b2718}
+.membership-card.featured{border:2px solid var(--purple);transform:translateY(-8px)}
+.membership-card.featured:hover{transform:translateY(-13px)}
+.plan-label{font-size:.7rem;letter-spacing:.13em;font-weight:800;color:var(--purple);background:#f3e9d9;border-radius:99px;padding:8px 12px}
+.membership-card h3{font-size:1.4rem;margin:20px 0 8px}
+.membership-card .plan-desc{font-size:.9rem;min-height:52px}
+.membership-card ul{list-style:none;padding:0;margin:12px 0 25px;display:grid;gap:13px;width:100%}
+.membership-card li{color:var(--muted);font-size:.88rem}
+.membership-card li:before{content:"✓";color:var(--purple);font-weight:800;margin-right:10px}
+.membership-card .btn{margin-top:auto}
+.membership-note{text-align:center;font-size:.8rem;max-width:760px;margin:26px auto 0}
+@media(max-width:900px){.service-grid.wellness-grid,.membership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.membership-card.featured{transform:none}}
+@media(max-width:600px){.service-grid.wellness-grid,.membership-grid{grid-template-columns:1fr}.service-image{height:210px}.membership-card{padding:25px}.membership-card .plan-desc{min-height:0}}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+<div class="scroll-overlay" id="scrollOverlay" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<header class="nav-wrap" id="top">
+  <div class="container nav">
+    <a class="logo" href="#top" aria-label="Ujjain Wellness Center home"><img class="logo-mark" src="images/embedded-01.png" alt="Ujjain Wellness Center logo"><span class="logo-name">Ujjain Wellness <small>Unwell to well at Ujjain Wellness</small></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#top">Home</a><a href="#about">About us</a><a href="#services">Treatments</a><a href="#membership">Membership</a><a href="#stories">Patient care</a><a href="#articles">Health articles</a>
+    </nav>
+    <a class="btn" href="#booking">Book Reservation<span class="arrow"></span> </> <span class="arrow">↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero">
+ <div class="container hero-grid">
+  <div class="hero-copy reveal-left">
+   <span class="eyebrow">WELLNESS • RELAXATION • SELF CARE</span>
+   <h1>Move better.<br>Live with less<br><span>pain.</span></h1>
+   <p>Discover thoughtful wellness experiences designed to help you pause, recharge and make time for yourself.</p>
+   <div class="hero-actions"><a class="btn" href="#booking">Book an appointment <span class="arrow">↗</span></a><a class="btn ghost" href="#services">Explore services <span class="arrow">↓</span></a></div>
+   <div class="hero-note"><div class="avatars"><img src="images/embedded-02.jpg" alt=""><img src="images/embedded-03.jpg" alt=""><img src="images/embedded-04.jpg" alt=""></div><span><strong>Care focused on you</strong><br>Personalised pain management</span></div>
+  </div>
+  <div class="hero-visual reveal-right">
+   <div class="blob one"></div><div class="blob two"></div>
+   <div class="hero-photo scroll-wipe"><video class="hero-reel" muted playsinline preload="metadata" poster="https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3" aria-label="Cinematic treatment session background"></video><img src="images/embedded-05.jpg" alt="Physiotherapist helping a patient with a personalised treatment"></div>
+   <div class="float-card experience"><small><span class="mini-icon">✦</span>Established in Ujjain</small><strong>Since 2021</strong><small>Personalised care</small></div>
+   <div class="float-card rating"><div class="rating-stars">★★★★★</div><strong>Non-surgical <span style="font-weight:500;color:var(--muted);font-size:.75rem">care approach</span></strong></div>
+   <div class="hero-stamp"><div>Unwell<br>To Well At Ujjain Wellness</div></div>
+  </div>
+ </div>
+</section>
+<section class="trust"><div class="container trust-inner"><div class="trust-label">Ujjain Wellness</div><div class="trust-logos"><span><i>◈</i> Spine Care</span><span><i>◎</i> Pain Relief</span><span><i>✚</i> Physiotherapy</span><span><i>≋</i> Wellness</span></div></div></section>
+<section class="scroll-story" id="care-journey" aria-label="Explore our approach to care"><div class="container story-top"><div><span class="eyebrow" style="color:#E8D3A1">THE UJJAIN WELLNESS APPROACH</span><h2>Understand pain.<br>Plan care. Move forward.</h2></div><p>A patient-focused approach to assessment, personalised treatment and recovery support.</p></div><div class="container story-track-wrap"><div class="story-track"><article class="story-card"><img src="images/embedded-06.jpg" alt="Clinician discussing a care plan with a patient"><span class="story-index">01 / LISTEN</span><div class="story-content"><h3>Tell us what hurts.</h3><p>Discuss your symptoms, daily routine and treatment goals.</p></div></article><article class="story-card"><img src="images/embedded-07.jpg" alt="Physiotherapist supporting an assessment"><span class="story-index">02 / ASSESS</span><div class="story-content"><h3>Assess your condition.</h3><p>Clinical assessment helps guide an appropriate care plan.</p></div></article><article class="story-card"><img src="images/embedded-08.jpg" alt="Guided rehabilitation exercise"><span class="story-index">03 / REBUILD</span><div class="story-content"><h3>Personalised treatment.</h3><p>Chiropractic care and physiotherapy based on your needs.</p></div></article><article class="story-card"><img src="images/embedded-09.jpg" alt="Person practising a mobility exercise"><span class="story-index">04 / MOVE FORWARD</span><div class="story-content"><h3>Keep moving forward.</h3><p>Guidance to support mobility and everyday function.</p></div></article></div><div class="story-progress"><span></span></div></div></section>
+<section class="booking" id="booking"><div class="container"><div class="booking-panel reveal">
+ <div class="booking-head"><span class="eyebrow">UJJAIN WELLNESS CENTER</span><h2>Plan your wellness visit</h2><p>Share your contact details and our team can help you discuss the next step in your care.</p></div>
+ <form class="booking-form" id="bookingForm">
+  <div class="field"><input name="name" placeholder="Full name" aria-label="Full name" required></div>
+  <div class="field"><input name="age" type="number" min="1" max="120" placeholder="Age" aria-label="Age" required></div>
+  <div class="field"><input name="phone" type="tel" placeholder="Phone number" aria-label="Phone number" required></div>
+  <div class="field"><select name="service" aria-label="Choose a wellness service" required><option value="">Choose a service</option><option>Steam</option><option>Hydro Colon</option><option>Cupping Therapy</option><option>Weight Loss Treatment</option><option>Shirodhara Therapy</option><option>Body Massage</option><option>Ozone Therapy</option><option>Slimming Therapy</option><option>Meditation</option><option>Jacuzzi Massage</option><option>Chiropractic Treatment</option><option>Physiotherapy</option><option>Ayurvedic Care</option><option>Massage Chair</option></select></div>
+  <div class="field"><input name="city" type="text" placeholder="City / Location" aria-label="City or location" required></div>
+  <div class="field"><select name="time" aria-label="Preferred time"><option value="">Preferred time</option><option>10 AM – 1 PM</option><option>1 PM – 4 PM</option><option>4 PM – 7 PM</option></select></div>
+  <div class="field"><select name="visit" aria-label="Visit type"><option>First appointment</option><option>Follow-up</option></select></div>
+  <button class="btn" type="submit">Request a visit <span class="arrow">↗</span></button>
+ </form><p class="form-message" id="formMessage" role="status">Your WhatsApp message is being prepared.</p>
+ </div></div></section>
+<section class="section" id="about"><div class="container about-grid">
+ <div class="about-visual reveal-left"><div class="about-main scroll-wipe"><img src="images/embedded-10.jpg" alt="Therapist supporting a patient through a recovery exercise"></div><div class="about-side"><img src="images/embedded-11.jpg" alt="Guided movement and rehabilitation"></div><div class="stat-card"><strong>Personal</strong><span>care plans</span></div></div>
+ <div class="about-copy reveal-right"><span class="eyebrow">ABOUT UJJAIN WELLNESS CENTER</span><h2>Personalised care. A focus on the cause of pain.</h2><p>Ujjain Wellness Center is a specialised wellness centre in Ujjain, Madhya Pradesh. We focus on chiropractic care, physiotherapy and conservative treatment options tailored to individual needs.</p><p>Our aim is to create a welcoming space for relaxation, self-care and wellness experiences, with clear guidance so every visitor can make informed choices.</p><div class="check-list"><div class="check"><b>✓</b>Individualised care plans</div><div class="check"><b>✓</b>Experienced care team</div><div class="check"><b>✓</b>Conservative treatment options</div><div class="check"><b>✓</b>Clear treatment guidance</div></div><a class="btn" href="#membership">Meet your care team <span class="arrow">↗</span></a></div>
+</div></section>
+<section class="section services" id="services">
+ <div class="container">
+  <div class="section-head reveal"><div><span class="eyebrow">WELLNESS SERVICES</span><h2>Make time for your wellbeing.</h2></div><p>Explore relaxing wellness experiences and supportive care options. Our team can help you choose a service suited to your preferences.</p></div>
+  <div class="service-grid wellness-grid">
+   <article class="service-card reveal delay-1">
+    <div class="service-image"><img src="images/steam.jpg" alt="Steam wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">♨</div>
+    <h3>Steam</h3><p>A warm steam session designed to support relaxation and leave you feeling refreshed. Please check suitability with our team before booking.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Steam." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-2">
+    <div class="service-image"><img src="images/hydro-colon.jpg" alt="Hydro Colon wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">◌</div>
+    <h3>Hydro Colon</h3><p>A specialist colon hydrotherapy service offered following a suitability discussion. Our team can explain the process, hygiene protocols and whether it is appropriate for you.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Hydro%20Colon." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-3">
+    <div class="service-image"><img src="images/cupping.jpg" alt="Cupping Therapy wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">◉</div>
+    <h3>Cupping Therapy</h3><p>A traditional cupping session used by some people as part of a relaxation and wellbeing routine. Suitability and expected benefits vary by person.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Cupping%20Therapy." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-4">
+    <div class="service-image"><img src="images/weight-loss.jpg" alt="Weight Loss Treatment wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">✦</div>
+    <h3>Weight Loss Treatment</h3><p>Personalised weight-management support focused on realistic goals, sustainable habits and wellbeing rather than quick fixes.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Weight%20Loss%20Treatment." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-1">
+    <div class="service-image"><img src="images/shirodhara.jpg" alt="Shirodhara Therapy wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">❋</div>
+    <h3>Shirodhara Therapy</h3><p>A traditional Ayurvedic relaxation experience involving a gentle, steady stream of warm oil over the forehead, when suitable.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Shirodhara%20Therapy." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-2">
+    <div class="service-image"><img src="images/body-massage.jpg" alt="Body Massage wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">〰</div>
+    <h3>Body Massage</h3><p>A tailored massage experience to help you unwind and ease everyday muscular tension. Pressure and focus areas can be discussed before the session.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Body%20Massage." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-3">
+    <div class="service-image"><img src="images/ozone.jpg" alt="Ozone Therapy wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">✧</div>
+    <h3>Ozone Therapy</h3><p>Ask our team about this service, its evidence, risks and suitability before making a decision. It is not a substitute for established medical care.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Ozone%20Therapy." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-4">
+    <div class="service-image"><img src="images/slimming.jpg" alt="Slimming Therapy wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">◈</div>
+    <h3>Slimming Therapy</h3><p>Wellness-focused body care with a consultation to discuss goals, realistic expectations and the options available at our centre.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Slimming%20Therapy." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-1">
+    <div class="service-image"><img src="images/meditation.jpg" alt="Meditation wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">☼</div>
+    <h3>Meditation</h3><p>Guided quiet time and mindfulness practices to support relaxation, focus and a calmer daily routine.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Meditation." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-2">
+    <div class="service-image"><img src="images/jacuzzi.jpg" alt="Jacuzzi Massage wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">≋</div>
+    <h3>Jacuzzi Massage</h3><p>A warm-water hydro-relaxation experience intended for comfort and unwinding, subject to health and safety suitability.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Jacuzzi%20Massage." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-3">
+    <div class="service-image"><img src="images/chiro.jpg" alt="Chiropractic Treatment wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">✚</div>
+    <h3>Chiropractic Treatment</h3><p>Individualised assessment and hands-on musculoskeletal care where appropriate, with a focus on movement, comfort and informed choices.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Chiropractic%20Treatment." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-4">
+    <div class="service-image"><img src="images/physio.jpg" alt="Physiotherapy wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">↗</div>
+    <h3>Physiotherapy</h3><p>Movement-based assessment and exercise support to work on mobility, strength, balance and everyday function.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Physiotherapy." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-1">
+    <div class="service-image"><img src="images/ayurvedic.jpg" alt="Ayurvedic Care wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">❀</div>
+    <h3>Ayurvedic Care</h3><p>Traditional Ayurvedic wellness practices tailored through a discussion of your preferences and suitability.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Ayurvedic%20Care." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-1">
+    <div class="service-image"><img src="images/steam.jpg" alt="Steam wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">♨</div>
+    <h3>Steam</h3><p>A warm steam session designed to support relaxation and leave you feeling refreshed. Please check suitability with our team before booking.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Steam." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-2">
+    <div class="service-image"><img src="images/massage-chair.jpg" alt="Massage Chair wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">◎</div>
+    <h3>Massage Chair</h3><p>Enjoy an assisted massage-chair session designed for a short break, relaxation and everyday comfort.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Massage%20Chair." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+   <article class="service-card reveal delay-2">
+    <div class="service-image"><img src="images/Sound Therapy.jpg" alt="Massage Chair wellness service" loading="lazy" width="900" height="620"></div>
+    <div class="service-icon" aria-hidden="true">◎</div>
+    <h3>Sound therapy</h3><p>Enjoy an assisted massage-chair session designed for a short break, relaxation and everyday comfort.</p>
+    <a class="text-link" href="https://wa.me/919301781659?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Massage%20Chair." target="_blank" rel="noopener">Enquire on WhatsApp <span>↗</span></a>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section"><div class="container quality-grid">
+ <div class="quality-image reveal-left scroll-wipe"><img src="images/embedded-12.jpg" alt="A calm, welcoming wellness and movement space"><div class="image-caption">Your mobility matters.</div></div>
+ <div class="quality-copy reveal-right"><span class="eyebrow">WHY UJJAIN WELLNESS CENTER</span><h2>Care built around your needs.</h2><p>We believe good care starts with listening, a careful assessment and clear discussion of available treatment options.</p><div class="quality-points"><div class="quality-point"><span>✓</span>Clear goals and a plan made for you</div><div class="quality-point"><span>✓</span>Care that adapts as you make progress</div><div class="quality-point"><span>✓</span>A welcoming space without judgement</div><div class="quality-point"><span>✓</span>Tools and guidance for life beyond the clinic</div></div><a class="btn" href="#booking">Start your recovery <span class="arrow">↗</span></a></div>
+</div></section>
+<section class="section membership" id="membership">
+ <div class="container">
+  <div class="section-head reveal"><div><span class="eyebrow">WELLNESS MEMBERSHIPS</span><h2>A little wellbeing, more often.</h2></div><p>Choose a flexible package and confirm inclusions, availability and pricing with our team before purchase.</p></div>
+  <div class="membership-grid">
+   <article class="membership-card reveal"><span class="plan-label">STARTER</span><h3>Wellness Essential</h3><p class="plan-desc">A simple way to begin your wellness routine.</p><ul><li>3 wellness sessions</li><li>Personal service guidance</li><li>Use within 30 days</li></ul><a class="btn ghost" href="https://wa.me/919301781659?text=Hello%2C%20please%20share%20Wellness%20Essential%20membership%20details." target="_blank" rel="noopener">Ask for pricing ↗</a></article>
+   <article class="membership-card featured reveal delay-1"><span class="plan-label">POPULAR</span><h3>Wellness Plus</h3><p class="plan-desc">Build a more consistent self-care habit.</p><ul><li>6 wellness sessions</li><li>Priority booking requests</li><li>Use within 60 days</li></ul><a class="btn" href="https://wa.me/919301781659?text=Hello%2C%20please%20share%20Wellness%20Plus%20membership%20details." target="_blank" rel="noopener">Ask for pricing ↗</a></article>
+   <article class="membership-card reveal delay-2"><span class="plan-label">COMPLETE</span><h3>Wellness Signature</h3><p class="plan-desc">A tailored package for your preferred services.</p><ul><li>10 wellness sessions</li><li>Personalised service mix</li><li>Use within 90 days</li></ul><a class="btn ghost" href="https://wa.me/919301781659?text=Hello%2C%20please%20share%20Wellness%20Signature%20membership%20details." target="_blank" rel="noopener">Ask for pricing ↗</a></article>
+  </div><p class="membership-note">Package inclusions and prices are confirmed by the centre. Services are subject to availability and suitability; no medical outcome is guaranteed.</p>
+ </div>
+</section>
+<section class="section testimonials" id="stories"><div class="container testimonial-layout">
+ <div class="review-mosaic reveal-left"><img src="images/embedded-13.jpg" alt="Patient receiving supportive care"><img src="images/embedded-14.jpg" alt="Guided rehabilitation exercise"><img src="images/embedded-15.jpg" alt="Gentle exercise and mobility"><img src="images/embedded-16.jpg" alt="Wellness session"></div>
+ <div class="review-card reveal-right"><span class="eyebrow" style="color:#e0dcff">PATIENT-CENTRED CARE</span><div class="stars">★★★★★</div><blockquote>“At Ujjain Wellness Center, we focus on listening carefully, explaining care options and helping each patient work toward their individual mobility goals.”</blockquote><div class="review-person"><img src="images/embedded-17.png" alt="Patient portrait"><div><strong>Ujjain Wellness</strong><small>Ujjain, Madhya Pradesh</small></div></div></div>
+</div></section>
+<section class="section" id="articles"><div class="container">
+ <div class="section-head reveal"><div><span class="eyebrow">HEALTH & WELLNESS ARTICLES</span><h2>Simple ideas for everyday wellbeing.</h2></div><p>Explore practical ideas for relaxation, mindfulness and a balanced wellness routine.</p></div>
+ <div class="article-grid">
+  <article class="article-card reveal delay-1"><img src="images/embedded-18.jpg" alt="Runner exercising outdoors"><div class="article-body"><div class="article-meta">MOVEMENT · 6 MIN READ</div><h3>Everyday habits for back health</h3><p>How small, consistent activity can support strength, energy and overall wellbeing.</p><a class="text-link" href="#booking">Read article <span>→</span></a></div></article>
+  <article class="article-card reveal delay-2"><img src="images/embedded-19.jpg" alt="Person practising a strength exercise"><div class="article-body"><div class="article-meta">RECOVERY · 5 MIN READ</div><h3>Understanding sciatica and nerve pain</h3><p>A measured approach to rebuilding confidence, capacity and a routine that lasts.</p><a class="text-link" href="#booking">Read article <span>→</span></a></div></article>
+  <article class="article-card reveal delay-3"><img src="images/embedded-20.jpg" alt="Person exercising in a gym"><div class="article-body"><div class="article-meta">WELLNESS · 4 MIN READ</div><h3>What to know about neck and cervical pain</h3><p>Make an active day feel more achievable with a few realistic changes.</p><a class="text-link" href="#booking">Read article <span>→</span></a></div></article>
+  <article class="article-card reveal delay-4"><img src="images/embedded-21.jpg" alt="Guided mobility and stretching session"><div class="article-body"><div class="article-meta">EXPERT TIPS · 7 MIN READ</div><h3>When to seek assessment for knee pain</h3><p>From your first conversation to a personalised plan, here’s how we get started.</p><a class="text-link" href="#booking">Read article <span>→</span></a></div></article>
+ </div>
+</div></section>
+<section class="cta"><div class="container"><div class="cta-panel reveal"><div><span class="eyebrow" style="color:#E8D3A1">PERSONALISED PAIN CARE IN UJJAIN</span><h2>Take the next step toward better mobility.</h2><p>Contact Ujjain Wellness to discuss your concerns and appointment options.</p></div><a class="btn" href="#booking">Let’s get started <span class="arrow">↗</span></a></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+ <div class="footer-brand"><a class="logo" href="#top" aria-label="Ujjain Wellness  home"><img class="logo-mark" src="images/embedded-22.png" alt="Ujjain Wellness Center logo"><span class="logo-name">Ujjain Wellness Center<small>WELLNESS • RELAXATION • SELF CARE</small></span></a><p>A welcoming wellness destination for relaxation, self-care, movement and personalised wellness experiences in Ujjain, Madhya Pradesh.</p><div class="socials"><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">f</a><a href="https://youtube.com/" aria-label="YouTube">▶</a></div></div>
+ <div><h3>Explore</h3><div class="footer-links"><a href="#about">About us</a><a href="#services">Our services</a><a href="#membership">Memberships</a></div></div>
+ <div><h3>Helpful links</h3><div class="footer-links"><a href="#articles">Articles & insights</a><a href="#booking">Book an appointment</a><a href="#booking">Frequently asked questions</a><a href="#booking">Privacy policy</a></div></div>
+ <div class="footer-contact"><h3>Say hello</h3><p>⌖ <a href="https://maps.google.com/?q=Ujjain+Wellness+Center+Ujjain" target="_blank" rel="noopener">Dhabla Fanta, near Bansal Warehouse, Unhel–Nagda Road, Ujjain, MP</a></p><p>☎ +91 9301781659</p><p>✉ Contact us for email details</p><p>◷ Mon–Sat · 10:00 AM–7:00 PM</p></div>
+ </div><div class="footer-bottom"><span>© <span id="year"></span> Ujjain Wellness Center. All rights reserved.</span><span>Ujjain Wellness Center</span></div></div></footer>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<script>
+
+// Smooth scroll-linked overlay and progress indicator
+const scrollOverlay=document.getElementById('scrollOverlay');
+const scrollProgress=document.getElementById('scrollProgress');
+let scrollTicking=false;
+function updateScrollEffects(){
+  const maxScroll=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
+  const progress=Math.min(1,Math.max(0,window.scrollY/maxScroll));
+  if(scrollProgress) scrollProgress.style.transform=`scaleX(${progress})`;
+  if(scrollOverlay){
+    scrollOverlay.style.opacity=String(Math.min(.34,progress*.34));
+    scrollOverlay.style.transform=`translateY(${14-progress*14}%)`;
+  }
+  document.querySelectorAll('.scroll-wipe').forEach(el=>{
+    const rect=el.getBoundingClientRect();
+    const viewH=window.innerHeight||1;
+    const amount=Math.min(1,Math.max(0,(viewH-rect.top)/(viewH+rect.height)));
+    el.style.setProperty('--wipe',String(amount));
+  });
+  scrollTicking=false;
+}
+window.addEventListener('scroll',()=>{
+  if(!scrollTicking){window.requestAnimationFrame(updateScrollEffects);scrollTicking=true;}
+},{passive:true});
+window.addEventListener('resize',updateScrollEffects,{passive:true});
+updateScrollEffects();
+
+const navWrap=document.querySelector('.nav-wrap'),backTop=document.getElementById('backTop'),menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+function onScroll(){navWrap.classList.toggle('scrolled',window.scrollY>16);backTop.classList.toggle('show',window.scrollY>500)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
+
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+ e.preventDefault(); const f=new FormData(e.currentTarget);
+ const msg=`Appointment request - Ujjain Wellness Center%0AName: ${encodeURIComponent(f.get('name'))}%0AAge: ${encodeURIComponent(f.get('age'))}%0APhone: ${encodeURIComponent(f.get('phone'))}%0ACity: ${encodeURIComponent(f.get('city'))}%0AConcern: ${encodeURIComponent(f.get('service'))}%0APreferred time: ${encodeURIComponent(f.get('time'))}%0AVisit: ${encodeURIComponent(f.get('visit'))}`;
+ window.open('https://wa.me/919301781659?text='+msg,'_blank');
+ document.getElementById('formMessage').style.display='block';
+});
+</script>
+
+<script>
+window.addEventListener('load', function(){
+  if(!window.gsap || !window.ScrollTrigger || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger);
+  // Kinetic typography: split existing headline into line-like spans without changing copy.
+  const heroTitle=document.querySelector('.hero h1');
+  if(heroTitle){
+    const html=heroTitle.innerHTML;
+    heroTitle.innerHTML=html.replace(/Move better\.<br>Live with less<br>/,'<span class="kinetic-line"><span>Move better.</span></span><br><span class="kinetic-line"><span>Live with less</span></span><br>');
+    gsap.fromTo('.hero h1 .kinetic-line span',{yPercent:115,opacity:0},{yPercent:0,opacity:1,duration:1.05,ease:'power4.out',stagger:.16,delay:.15});
+    gsap.fromTo('.hero h1 > span',{y:28,opacity:0},{y:0,opacity:1,duration:.9,ease:'power3.out',delay:.48});
+  }
+  // Layered parallax depth for hero, editorial photos and floating proof points.
+  gsap.utils.toArray('.hero-photo,.about-main,.quality-image,.team-photo,.chiro-photo').forEach((frame)=>{
+    const img=frame.querySelector('img'); if(!img) return;
+    gsap.fromTo(img,{yPercent:-7,scale:1.08},{yPercent:7,scale:1.16,ease:'none',scrollTrigger:{trigger:frame,start:'top bottom',end:'bottom top',scrub:1.1}});
+  });
+  // Clip-path reveal on imagery, tied to scroll rather than a one-time entrance.
+  gsap.utils.toArray('.hero-photo,.about-main,.quality-image,.team-photo,.chiro-photo').forEach((frame)=>{
+    gsap.fromTo(frame,{clipPath:'inset(12% 9% 12% 9% round 24px)'},{clipPath:'inset(0% 0% 0% 0% round 24px)',ease:'none',scrollTrigger:{trigger:frame,start:'top 88%',end:'top 35%',scrub:.75}});
+  });
+  // Horizontal scroll gallery with stacked-card feel and section transition.
+  const track=document.querySelector('.story-track'), wrap=document.querySelector('.scroll-story'), bar=document.querySelector('.story-progress span');
+  if(track && wrap && window.matchMedia('(min-width: 761px)').matches){
+    const distance=()=>Math.max(0,track.scrollWidth-wrap.querySelector('.story-track-wrap').clientWidth);
+    gsap.to(track,{x:()=>-distance(),ease:'none',scrollTrigger:{trigger:wrap,start:'top top',end:()=>'+='+distance(),pin:true,scrub:1,invalidateOnRefresh:true,onUpdate:self=>{if(bar)gsap.set(bar,{scaleX:self.progress})}}});
+    gsap.utils.toArray('.story-card').forEach((card,i)=>gsap.fromTo(card,{y:i%2?45:0,rotate:i%2?2:-1,scale:.94},{y:0,rotate:0,scale:1,ease:'none',scrollTrigger:{trigger:wrap,start:'top bottom',end:'bottom top',scrub:1}}));
+  } else if(track && bar){
+    const update=()=>{const max=track.scrollWidth-track.parentElement.clientWidth;gsap.set(bar,{scaleX:max>0?Math.min(1,track.parentElement.scrollLeft/max):1})};
+    track.parentElement.style.overflowX='auto';track.parentElement.style.scrollbarWidth='none';track.parentElement.addEventListener('scroll',update,{passive:true});update();
+  }
+  // Scroll-controlled video: play/pause and scrub by scroll progress when browser supports it.
+  const video=document.querySelector('.hero-reel');
+  if(video){
+    // Remote video is optional; if the source is unavailable, the hero poster/image remains as fallback.
+    video.src='';
+    video.addEventListener('loadedmetadata',()=>{
+      const frame=video.closest('.hero-photo'); frame.classList.add('video-ready'); video.pause();
+      gsap.fromTo(video,{currentTime:0},{currentTime:Math.max(0,video.duration-.1),ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true,onLeave:()=>video.pause(),onEnterBack:()=>video.pause()}});
+    },{once:true});
+    video.addEventListener('error',()=>video.closest('.hero-photo').classList.remove('video-ready'),{once:true});
+  }
+  // Staggered cards and section panel transitions.
+  gsap.fromTo('.service-card',{y:65,opacity:0,rotateX:5},{y:0,opacity:1,rotateX:0,duration:.85,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'.service-grid',start:'top 82%',toggleActions:'play none none reverse'}});
+  gsap.fromTo('.article-card',{y:45,opacity:0},{y:0,opacity:1,duration:.7,ease:'power2.out',stagger:.1,scrollTrigger:{trigger:'.article-grid',start:'top 82%',toggleActions:'play none none reverse'}});
+  gsap.fromTo('.chiro-feature .chiro-panel',{y:55,scale:.96,opacity:0},{y:0,scale:1,opacity:1,duration:1,ease:'power3.out',scrollTrigger:{trigger:'.chiro-feature',start:'top 88%',toggleActions:'play none none reverse'}});
+  gsap.utils.toArray('.section-head h2,.about-copy h2,.chiro-copy h2,.booking-head h2').forEach(el=>gsap.fromTo(el,{y:35,opacity:0},{y:0,opacity:1,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none reverse'}}));
+  ScrollTrigger.refresh();
+});
+</script>
+
+</body>
+</html>
