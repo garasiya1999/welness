@@ -106,6 +106,28 @@
 @media(max-width:900px){.service-grid.wellness-grid,.membership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.membership-card.featured{transform:none}}
 @media(max-width:600px){.service-grid.wellness-grid,.membership-grid{grid-template-columns:1fr}.service-image{height:210px}.membership-card{padding:25px}.membership-card .plan-desc{min-height:0}}
 
+
+/* FIX: prevent oversized blank hero area in Android Chrome desktop-site mode */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hero { min-height: auto !important; height: auto !important; padding-top: clamp(28px, 5vh, 54px) !important; padding-bottom: clamp(34px, 6vh, 64px) !important; }
+  .hero-grid { gap: clamp(24px, 4vw, 42px) !important; }
+  .hero-visual { min-height: clamp(360px, 48vw, 490px) !important; }
+}
+@media (max-width: 760px) {
+  .hero { min-height: auto !important; height: auto !important; padding-top: 30px !important; padding-bottom: 42px !important; }
+}
+@media (min-width: 1101px) { .hero { min-height: 620px; } }
+
+
+/* Final fix: touch phones using Chrome Desktop site should not get desktop pinned-scroll spacing. */
+@media (hover: none), (pointer: coarse) {
+  .hero { min-height: auto !important; }
+  .scroll-story { min-height: 0 !important; height: auto !important; }
+  .story-track-wrap { overflow-x: auto !important; overflow-y: hidden !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .story-track-wrap::-webkit-scrollbar { display: none; }
+  .story-track { transform: none !important; }
+}
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
@@ -370,13 +392,17 @@ window.addEventListener('load', function(){
   });
   // Horizontal scroll gallery with stacked-card feel and section transition.
   const track=document.querySelector('.story-track'), wrap=document.querySelector('.scroll-story'), bar=document.querySelector('.story-progress span');
-  if(track && wrap && window.matchMedia('(min-width: 761px)').matches){
+  if(track && wrap && window.matchMedia('(min-width: 761px) and (hover: hover) and (pointer: fine)').matches){
     const distance=()=>Math.max(0,track.scrollWidth-wrap.querySelector('.story-track-wrap').clientWidth);
     gsap.to(track,{x:()=>-distance(),ease:'none',scrollTrigger:{trigger:wrap,start:'top top',end:()=>'+='+distance(),pin:true,scrub:1,invalidateOnRefresh:true,onUpdate:self=>{if(bar)gsap.set(bar,{scaleX:self.progress})}}});
     gsap.utils.toArray('.story-card').forEach((card,i)=>gsap.fromTo(card,{y:i%2?45:0,rotate:i%2?2:-1,scale:.94},{y:0,rotate:0,scale:1,ease:'none',scrollTrigger:{trigger:wrap,start:'top bottom',end:'bottom top',scrub:1}}));
   } else if(track && bar){
-    const update=()=>{const max=track.scrollWidth-track.parentElement.clientWidth;gsap.set(bar,{scaleX:max>0?Math.min(1,track.parentElement.scrollLeft/max):1})};
-    track.parentElement.style.overflowX='auto';track.parentElement.style.scrollbarWidth='none';track.parentElement.addEventListener('scroll',update,{passive:true});update();
+    const scroller=track.parentElement;
+    // Touch devices (including Chrome's Desktop site mode) use native horizontal swiping, not a pinned GSAP scroll.
+    scroller.style.overflowX='auto';scroller.style.overflowY='hidden';scroller.style.scrollbarWidth='none';scroller.style.webkitOverflowScrolling='touch';
+    track.style.transform='none';track.style.paddingRight='15px';
+    const update=()=>{const max=track.scrollWidth-scroller.clientWidth;gsap.set(bar,{scaleX:max>0?Math.min(1,scroller.scrollLeft/max):1})};
+    scroller.addEventListener('scroll',update,{passive:true});update();
   }
   // Scroll-controlled video: play/pause and scrub by scroll progress when browser supports it.
   const video=document.querySelector('.hero-reel');
